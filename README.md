@@ -98,7 +98,12 @@ git clone https://github.com/yourusername/sky-take-out.git
 
 ### 3. 配置应用
 
-修改 `sky-server/src/main/resources/application-dev.yml` 文件，配置数据库连接、Redis 连接、阿里云 OSS 等信息
+项目使用模板配置文件来保护敏感信息。请按照以下步骤配置：
+
+1. 在`sky-server/src/main/resources`目录下找到`application-dev.template.yml`文件
+2. 复制该文件并重命名为`application-dev.yml`
+3. 根据您的实际环境修改`application-dev.yml`中的配置参数（数据库连接、Redis 连接、阿里云 OSS 等信息）
+4. 此配置文件已被添加到`.gitignore`中，不会被提交到版本控制系统
 
 ### 4. 编译打包
 
